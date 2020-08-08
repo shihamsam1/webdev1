@@ -1,0 +1,13 @@
+p {
+    color: limegreen;
+}
+
+/* this is class targetting 'ctrl + /' */
+.intro {
+    color: orangered
+}
+
+/* id targetting */
+#special {
+    color: purple
+}
