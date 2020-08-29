@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Forms Example</title>
+    <style>
+    label{
+        width: 80px;
+        display: inline-block;
+    }
+    div{
+        margin-bottom: 10px;
+    }
+    .important{
+        color: blue;
+    }
+    .red-class{
+        color: blue;
+
+    }
+    </style>
+    <script type="text/javascript">
+
+    function changeNameLabel(){
+        document.getElementById("name_label").className = "red-class";
+        document.getElementById("name_label").innerHTML = "First Name";
+
+
+    }
+    function sayHello(){
+          var name = document.getElementById("stu_name").value;
+          var id = document.getElementById("stu_name").id;
+
+
+        var age = document.getElementById("stu_age").value;
+        var message = "Your name is " + name + ". " + "Age is " + age + ".";
+
+        alert(message);
+
+       
+        
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Student Information</h1>
+
+   
+
+    <form action="hcc_processing.php"  method="POST">
+        <div>
+            <label id="name_label" >Name</label>
+            <input type="text" name="stu_name" value="Shiham Samsudeen" id="stu_name">
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="text" name="stu_age" value="" id="stu_age">
+        </div>
+        <div>
+            <label>Gender</label>
+            <input name="gender" type="radio" value="Male" > Male
+            <input name="gender" type="radio" value="Female"> Female
+        </div>
+        <div>
+            <!-- <input id="save_button" type="button" value="Save" onclick="changeNameLabel()"> -->
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

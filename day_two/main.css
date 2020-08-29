@@ -1,0 +1,23 @@
+p, div{
+    color: purple
+}
+
+h1 {
+    color:purple
+}
+
+div {
+   margin-bottom: 20px; 
+}
+
+.navigation {
+    text-decoration: none;
+    color:teal;
+    border:1px solid green;
+    padding:5px;
+}
+
+.navigation:hover {
+    background: green;
+    color:white;
+}
