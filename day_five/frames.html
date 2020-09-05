@@ -6,10 +6,13 @@
 </head>
 <frameset cols="30%, *">
     <frame src="navigation.html">
-        <frameset rows="20%, 60%, 20%">
-            <frame src="header.html"></frame>
-            <frame name="contentframe" src="content.html"></frame>
-            <frame src="footer.html"></frame>
+        <frameset rows="20%,60%,*">
+            <frame src="header.html"> 
+                <frameset cols="50%,*" >
+                        <frame src="static/left-content.html" name="leftcontent">  
+                        <frame src="static/right-content.html" name="rightcontent">  
+                </frameset>
+            <frame src="footer.html" >
 
         </frameset>
 </frameset>

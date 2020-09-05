@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        .red-para {
+            color: red;
+        }
+
+        #time {
+            color: green;
+            border: 2px solid #ccc;
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function formatAMPM(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var s = date.getSeconds();
+            s = checkTime(s);
+
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var strTime = hours + ':' + minutes + ':' + s + ' ' + ampm;
+            return strTime;
+        }
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+
+            document.getElementById('time').innerHTML = formatAMPM(today);
+           
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+
+    </script>
+</head>
+
+<body onload="startTime()">
+
+    <div>
+        <span id="time">Shiham</span>
+    </div>
+
+
+
+    <a href="#para6">Go to Para 6</a>
+
+    <a href="#para7"> Para 7</a>
+    <h2> Para 1</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iste quasi? Necessitatibus nostrum culpa
+        laborum? Repudiandae, optio culpa. Enim, eaque placeat fuga tempora molestias perferendis dolores dolore
+        repudiandae nobis. Perspiciatis!
+    </p>
+    <h2> Para 2</h2>
+    <p class="red-para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iste quasi? Necessitatibus nostrum culpa
+        laborum? Repudiandae, optio culpa. Enim, eaque placeat fuga tempora molestias perferendis dolores dolore
+        repudiandae nobis. Perspiciatis!
+    </p>
+    <h2> Para 3</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+    <h2> Para 4</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+
+    <h2> Para 5</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+    <h2 id="para6"> Para 6</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+    <h2> Para 7</h2>
+    <p id="para7">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, placeat inventore quas aperiam error
+        repellendus praesentium adipisci maxime, sapiente rem vero fugit eaque obcaecati, ipsa voluptas libero optio?
+        Exercitationem, illum.
+    </p>
+
+
+
+</body>
+
+</html>
