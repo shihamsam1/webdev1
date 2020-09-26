@@ -1,0 +1,30 @@
+
+    body {
+        background-color: blueviolet;
+    }
+    .form-container {
+        width: 360px;
+        text-align: center;
+        margin:50px auto;
+        background-color: rgb(170, 142, 197);
+    }
+
+    .heading {
+        padding-top:20px;
+        color: #fff;
+        font-family: Verdana;
+    }
+
+    input, textarea {
+        width: 300px;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-family: Verdana;
+        font-size: 16px;
+    }
+
+    input[type='submit']{
+        color: white;
+        background-color: blueviolet;
+        border: none;
+    }
