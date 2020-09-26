@@ -47,19 +47,23 @@
 
    
 
-    <form action="hcc_processing.php"  method="POST">
+    <form action="hcc_processing.php"  method="POST" enctype="multipart/form-data">
         <div>
             <label id="name_label" >Name</label>
-            <input type="text" name="stu_name" value="Shiham Samsudeen" id="stu_name">
+            <input type="text" name="stu_name" value="Shiham Samsudeen" >
         </div>
         <div>
             <label>Age</label>
-            <input type="text" name="stu_age" value="" id="stu_age">
+            <input type="text" name="age_shiham" value="">
         </div>
         <div>
             <label>Gender</label>
             <input name="gender" type="radio" value="Male" > Male
             <input name="gender" type="radio" value="Female"> Female
+        </div>
+        <div>
+            <label>Photo</label>
+            <input type="file" name="photo" />
         </div>
         <div>
             <!-- <input id="save_button" type="button" value="Save" onclick="changeNameLabel()"> -->
